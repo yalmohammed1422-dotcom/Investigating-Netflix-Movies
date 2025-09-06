@@ -1,0 +1,24 @@
+# a decade reach up to 9 years. it will start from 1990 to 1999
+# filter the data up to 1999 and the movies only
+decade = netflix_df[(netflix_df["release_year"] < 2000)&(netflix_df["type"] == "Movie")]
+#count the frequency(the number repeated) for each movie
+decade["freq"] = decade["duration"].map(decade["duration"].value_counts())
+# take the most repated duration
+max_freq = decade["freq"].max()
+# take the duration number using frequency as an input for the row needed
+duration_df = decade[decade["freq"] == max_freq]
+# take the higher duration
+duration = duration_df["duration"].max()
+print(duration)
+# second ans
+# declare count of variables
+short_movie_count = 0
+# take the 1990s decade filter
+decade1 = netflix_df[(netflix_df["release_year"] < 2000)&(netflix_df["release_year"] >= 1990)]
+# filter the type and genr needed
+decade1 = decade1.loc[(decade1["type"] == "Movie") & (decade1["genre"] == "Action")]
+# make loop to count the number of short movies
+for lab, row in decade1.iterrows():
+    if row["duration"] < 90:
+        short_movie_count = short_movie_count+1
+print(short_movie_count)
