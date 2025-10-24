@@ -81,11 +81,12 @@ short_movie_count = len(decade1[decade1["duration"] < 90])
 ## Results
 
 The analysis provides:
-- **Most Common Duration**: The most frequently occurring movie duration in 1990s movies
-- **Short Action Movie Count**: Total number of Action movies under 90 minutes from the 1990s
+- **Most Common Duration**: The most frequently occurring movie duration in 1990s movies: 94
+- **Short Action Movie Count**: Total number of Action movies under 90 minutes from the 1990s: 7
 
 ## Visualization
 <img width="2382" height="1179" alt="image" src="https://github.com/user-attachments/assets/ccac507f-d687-4c1f-adb7-a37f5c9b9a02" />
+<img width="2382" height="1181" alt="image" src="https://github.com/user-attachments/assets/6407d731-be5a-4f2e-97e5-c50f95f66649" />
 
 ## Author
 
