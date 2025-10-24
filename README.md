@@ -55,7 +55,6 @@ duration_df = decade[decade["freq"] == max_freq]
 
 # Select the highest duration if multiple durations have the same frequency
 duration = duration_df["duration"].max()
-print(duration)
 ```
 
 **Logic**: This code identifies the most frequently occurring movie duration in the 1990s. If multiple durations have the same frequency, it returns the longest one.
@@ -74,7 +73,6 @@ decade1 = decade1.loc[(decade1["type"] == "Movie") & (decade1["genre"] == "Actio
 
 # Count movies with duration less than 90 minutes
 short_movie_count = len(decade1[decade1["duration"] < 90])
-        
 ```
 
 **Logic**: This code counts how many Action movies from the 1990s have a duration of less than 90 minutes.
@@ -86,26 +84,8 @@ The analysis provides:
 - **Most Common Duration**: The most frequently occurring movie duration in 1990s movies
 - **Short Action Movie Count**: Total number of Action movies under 90 minutes from the 1990s
 
-## Potential Improvements
-
-- Use vectorized operations instead of iterrows() for better performance
-- Add data validation and error handling
-- Create visualizations for the results
-- Expand analysis to other decades or genres
-- Add statistical summaries and comparisons
-
-## Alternative Implementation (Optimized)
-
-For Analysis 2, a more efficient approach without loops:
-
-```python
-short_movie_count = len(decade1[decade1["duration"] < 90])
-```
-
-## Contributing
-
-Feel free to fork this project and submit pull requests for any improvements or additional analyses.
-
+## Visualization
+<img width="2382" height="1179" alt="image" src="https://github.com/user-attachments/assets/ccac507f-d687-4c1f-adb7-a37f5c9b9a02" />
 
 ## Author
 
