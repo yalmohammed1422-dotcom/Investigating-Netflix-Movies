@@ -20,12 +20,8 @@ This project analyzes Netflix movie data to answer two key questions about films
 2. Ensure the DataFrame contains the required columns
 3. Run the analysis scripts to get insights
 ```python
-# Importing pandas and matplotlib
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Read in the Netflix CSV as a DataFrame
-netflix_df = pd.read_csv("netflix_data.csv", index_col=0)
+pandas
+matplotlib.pyplot
 ```
 
 ## Dataset
