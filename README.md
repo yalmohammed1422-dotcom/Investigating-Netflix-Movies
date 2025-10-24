@@ -16,8 +16,16 @@ This project analyzes Netflix movie data to answer two key questions about films
 
 ## Requirements
 
+1. Load your Netflix dataset into a pandas DataFrame named `netflix_df`
+2. Ensure the DataFrame contains the required columns
+3. Run the analysis scripts to get insights
 ```python
-pandas
+# Importing pandas and matplotlib
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read in the Netflix CSV as a DataFrame
+netflix_df = pd.read_csv("netflix_data.csv", index_col=0)
 ```
 
 ## Dataset
@@ -65,33 +73,12 @@ decade1 = netflix_df[(netflix_df["release_year"] < 2000)&(netflix_df["release_ye
 decade1 = decade1.loc[(decade1["type"] == "Movie") & (decade1["genre"] == "Action")]
 
 # Count movies with duration less than 90 minutes
-for lab, row in decade1.iterrows():
-    if row["duration"] < 90:
-        short_movie_count = short_movie_count + 1
+short_movie_count = len(decade1[decade1["duration"] < 90])
         
-print(short_movie_count)
 ```
 
 **Logic**: This code counts how many Action movies from the 1990s have a duration of less than 90 minutes.
 
-## Usage
-
-1. Load your Netflix dataset into a pandas DataFrame named `netflix_df`
-2. Ensure the DataFrame contains the required columns
-3. Run the analysis scripts to get insights
-
-```python
-import pandas as pd
-
-# Load your data
-netflix_df = pd.read_csv('your_netflix_data.csv')
-
-# Run Analysis 1
-# [Insert code from Analysis 1]
-
-# Run Analysis 2
-# [Insert code from Analysis 2]
-```
 
 ## Results
 
@@ -119,9 +106,6 @@ short_movie_count = len(decade1[decade1["duration"] < 90])
 
 Feel free to fork this project and submit pull requests for any improvements or additional analyses.
 
-## License
-
-This project is open source and available under the MIT License.
 
 ## Author
 
